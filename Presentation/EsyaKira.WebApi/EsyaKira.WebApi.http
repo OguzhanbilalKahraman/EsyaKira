@@ -1,0 +1,6 @@
+@EsyaKira.WebApi_HostAddress = http://localhost:5273
+
+GET {{EsyaKira.WebApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
