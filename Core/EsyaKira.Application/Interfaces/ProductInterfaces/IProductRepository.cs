@@ -12,6 +12,8 @@ namespace EsyaKira.Application.Interfaces.ProductInterfaces
         List<Product> GetProductsListWithBrands();
         List<Product> GetLast5ProductsListWithBrands();
 
+       
+
         int GetProductCount();
 
     }

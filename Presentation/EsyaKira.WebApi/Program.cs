@@ -8,9 +8,11 @@ using EsyaKira.Application.Features.CQRS.Handlers.ProductHandlers;
 using EsyaKira.Application.Interfaces;
 
 using EsyaKira.Application.Interfaces.ProductInterfaces;
+using EsyaKira.Application.Interfaces.ProductPricingInterfaces;
 using EsyaKira.Application.Services;
 using EsyaKira.Persistance.Context;
 using EsyaKira.Persistance.Repositories;
+using EsyaKira.Persistance.Repositories.ProductPricingRepositories;
 using EsyaKira.Persistance.Repositories.ProductRepositories;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -19,6 +21,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddScoped<EsyaKiraContext>();
 builder.Services.AddScoped(typeof(IRepository<>),(typeof(Repository<>)));
 builder.Services.AddScoped(typeof(IProductRepository), typeof(ProductRepository));
+builder.Services.AddScoped(typeof(IProductPricingRepository), typeof(ProductPricingRepository));
+
 
 
 builder.Services.AddScoped<GetAboutQueryHandler>();
@@ -46,6 +50,8 @@ builder.Services.AddScoped<UpdateProductCommandHandler>();
 builder.Services.AddScoped<RemoveProductCommandHandler>();
 builder.Services.AddScoped<GetProductWithBrandQueryHandler>();
 builder.Services.AddScoped<GetLast5ProductsWithBrandQueryHandler>();
+
+
 
 builder.Services.AddScoped<GetCategoryQueryHandler>();
 builder.Services.AddScoped<GetCategoryByIdQueryHandler>();

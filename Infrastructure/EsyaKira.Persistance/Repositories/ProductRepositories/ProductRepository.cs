@@ -32,6 +32,6 @@ namespace EsyaKira.Persistance.Repositories.ProductRepositories
             return value;
         }
 
-       
+
     }
 }

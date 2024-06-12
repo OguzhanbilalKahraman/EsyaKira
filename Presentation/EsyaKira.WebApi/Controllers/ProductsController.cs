@@ -16,8 +16,9 @@ namespace EsyaKira.WebApi.Controllers
         private readonly RemoveProductCommandHandler _removeProductCommandHandler;
         private readonly GetProductWithBrandQueryHandler _getProductWithBrandQueryHandler;
         private readonly GetLast5ProductsWithBrandQueryHandler _getLast5ProductsWithBrandQueryHandler;
+       
 
-        public ProductsController(CreateProductCommandHandler createProductCommandHandler, GetProductByIdQueryHandler getProductByIdQueryHandler, GetProductQueryHandler getProductQueryHandler, UpdateProductCommandHandler updateProductCommandHandler, RemoveProductCommandHandler removeProductCommandHandler, GetProductWithBrandQueryHandler getProductWithBrandQueryHandler, GetLast5ProductsWithBrandQueryHandler getLast5ProductsWithBrandQueryHandler)
+        public ProductsController(CreateProductCommandHandler createProductCommandHandler, GetProductByIdQueryHandler getProductByIdQueryHandler, GetProductQueryHandler getProductQueryHandler, UpdateProductCommandHandler updateProductCommandHandler, RemoveProductCommandHandler removeProductCommandHandler, GetProductWithBrandQueryHandler getProductWithBrandQueryHandler, GetLast5ProductsWithBrandQueryHandler getLast5ProductsWithBrandQueryHandler )
         {
             _createProductCommandHandler = createProductCommandHandler;
             _getProductByIdQueryHandler = getProductByIdQueryHandler;
@@ -26,6 +27,7 @@ namespace EsyaKira.WebApi.Controllers
             _removeProductCommandHandler = removeProductCommandHandler;
             _getProductWithBrandQueryHandler = getProductWithBrandQueryHandler;
             _getLast5ProductsWithBrandQueryHandler = getLast5ProductsWithBrandQueryHandler;
+            
         }
 
         [HttpGet]
@@ -76,5 +78,6 @@ namespace EsyaKira.WebApi.Controllers
             var values = _getLast5ProductsWithBrandQueryHandler.Handle();
             return Ok(values);
         }
+
     }
 }
