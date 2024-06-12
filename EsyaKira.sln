@@ -19,7 +19,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EsyaKira.Application", "Cor
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Frontends", "Frontends", "{7A43DDB4-0419-4224-B772-84F612EFB665}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EsyaKira.WebUI", "Frontends\EsyaKira.WebUI\EsyaKira.WebUI.csproj", "{73C48FE5-8D5D-48F1-B133-DD8752B08031}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EsyaKira.WebUI", "Frontends\EsyaKira.WebUI\EsyaKira.WebUI.csproj", "{73C48FE5-8D5D-48F1-B133-DD8752B08031}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EsyaKira.Dto", "Frontends\EsyaKira.Dto\EsyaKira.Dto.csproj", "{07187E97-0518-45FB-9186-E957C5ED347E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,6 +49,10 @@ Global
 		{73C48FE5-8D5D-48F1-B133-DD8752B08031}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{73C48FE5-8D5D-48F1-B133-DD8752B08031}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{73C48FE5-8D5D-48F1-B133-DD8752B08031}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07187E97-0518-45FB-9186-E957C5ED347E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07187E97-0518-45FB-9186-E957C5ED347E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07187E97-0518-45FB-9186-E957C5ED347E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07187E97-0518-45FB-9186-E957C5ED347E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -57,6 +63,7 @@ Global
 		{2A8FE02B-EDDA-4CC3-A3A4-E9528A900DCC} = {D9582AB2-4978-4F3B-99F3-B9F6EC0356DC}
 		{E00CBF86-9E8E-4C66-B22D-D7B765D840DB} = {D672CEAA-8E1E-40A2-8358-3869006353AF}
 		{73C48FE5-8D5D-48F1-B133-DD8752B08031} = {7A43DDB4-0419-4224-B772-84F612EFB665}
+		{07187E97-0518-45FB-9186-E957C5ED347E} = {7A43DDB4-0419-4224-B772-84F612EFB665}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C2835F3A-F3AB-4FD7-B71D-A6E21AFB1AA0}
