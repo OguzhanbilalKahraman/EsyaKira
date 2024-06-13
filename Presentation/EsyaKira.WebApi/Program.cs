@@ -1,3 +1,4 @@
+using EsyaKira.Application.Tools;
 using EsyaKira.Application.Features.CQRS.Handlers.AboutHandlers;
 using EsyaKira.Application.Features.CQRS.Handlers.BannerHandlers;
 using EsyaKira.Application.Features.CQRS.Handlers.BrandHandlers;
@@ -10,12 +11,33 @@ using EsyaKira.Application.Interfaces;
 using EsyaKira.Application.Interfaces.ProductInterfaces;
 using EsyaKira.Application.Interfaces.ProductPricingInterfaces;
 using EsyaKira.Application.Services;
+
 using EsyaKira.Persistance.Context;
 using EsyaKira.Persistance.Repositories;
 using EsyaKira.Persistance.Repositories.ProductPricingRepositories;
 using EsyaKira.Persistance.Repositories.ProductRepositories;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(opt =>
+{
+    opt.RequireHttpsMetadata = false;
+    opt.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidAudience = JwtTokenDefaults.ValidAudience,
+        ValidIssuer = JwtTokenDefaults.ValidIssuer,
+        ClockSkew = TimeSpan.Zero,
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(JwtTokenDefaults.Key)),
+        ValidateLifetime = true,
+        ValidateIssuerSigningKey = true
+    };
+
+});
+
+
 
 // Add services to the container.
 builder.Services.AddScoped<EsyaKiraContext>();
@@ -85,6 +107,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
