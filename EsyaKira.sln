@@ -21,7 +21,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Frontends", "Frontends", "{
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EsyaKira.WebUI", "Frontends\EsyaKira.WebUI\EsyaKira.WebUI.csproj", "{73C48FE5-8D5D-48F1-B133-DD8752B08031}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EsyaKira.Dto", "Frontends\EsyaKira.Dto\EsyaKira.Dto.csproj", "{07187E97-0518-45FB-9186-E957C5ED347E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EsyaKira.Dto", "Frontends\EsyaKira.Dto\EsyaKira.Dto.csproj", "{07187E97-0518-45FB-9186-E957C5ED347E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

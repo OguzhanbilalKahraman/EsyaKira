@@ -30,11 +30,7 @@ namespace EsyaKira.Application.Features.Mediator.Handlers.ProductPricingHandlers
                 CoverImageUrl = x.Product.CoverImageUrl,
                 Model = x.Product.Model,
                 ProductId = x.ProductID
-                //ProductPrici = x.CarPricingID,
-                //Brand = x.Car.Brand.Name,
-                //CoverImageUrl = x.Car.CoverImageUrl,
-                //Model = x.Car.Model,
-                //CarId=x.CarID
+             
             }).ToList();
         }
     }
